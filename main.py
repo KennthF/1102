@@ -1,8 +1,6 @@
 
-#with open("three_digit_numbers.txt", "r") as file_num:
- #   file_content = file_num.read()
-
-#file_content = "380 339 420 308 448"
+with open("sample.txt", "r") as file_num:
+    file_content = file_num.read()
 
 cols = file_content.split(" ")
 
