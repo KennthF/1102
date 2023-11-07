@@ -1,19 +1,22 @@
+with open("three_digit_numbers.txt", "r") as file:
+    content = file.read()
+    content = content.replace("\n"," ") #Removes the line space
+    content = content.split(" ") #Split by spaces
+    
+      
 
-with open("sample.txt", "r") as file_num:
-    file_content = file_num.read()
+values = []
 
-cols = file_content.split(" ")
+for i in content:
+    if i.isnumeric(): #Turn it into a number
+        values.append(int(i))
 
-list_num = []
+print(values)
 
-for i in cols:
-    num = int(i)
-    list_num.append(num)
+print("\n")
 
-for count in range (min(list_num), max(list_num) + 1):
-    if count not in list_num:
-        print(f"{count} is missing")
+print(content)
 
-    else:
-        print(f"\n{count} is not missing\n")
 
+ 
+    
